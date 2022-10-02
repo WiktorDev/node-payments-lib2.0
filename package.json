@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": ["hotpay", "paybylink", "cashbill", "microsms", "przelewy24", "dotpay", "lvlup", "payu", "simpay", "stripe", "sms", "bank transfer", "transfer", "directbilling", "psc", "paysafecard", "payment provider", "icehost"],
+  "keywords": ["hotpay", "paybylink", "cashbill", "microsms", "przelewy24", "dotpay", "lvlup", "payu", "simpay", "stripe", "sms", "bank transfer", "transfer", "directbilling", "psc", "paysafecard", "payment provider", "icehost" ],
   "author": "wiktor#8880 (https://wiktor.tech/)",
   "license": "ISC",
   "homepage": "https://github.com/WiktorDev/node-payments-lib2.0",
