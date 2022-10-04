@@ -50,7 +50,7 @@ class CashBill extends HttpClient{
 
         let response = await this.doRequest(`${this.url}/payment/${this.shopId}`, qs.stringify(params), 'POST')
         if(!response.id){
-            throw new CashBillError(response)
+            throw new CashBillError(response['errorMessage'])
         }
         return response
     }
