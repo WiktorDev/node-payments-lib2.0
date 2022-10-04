@@ -64,7 +64,7 @@ class CashBill extends HttpClient{
 
         let response = await this.doRequest(`${this.url}/payment/${this.shopId}/${id}`, qs.stringify(params), "PUT")
         if(response){
-            throw new CashBillError(response)
+            throw new CashBillError(response['errorMessage'])
         }
     }
 
@@ -72,7 +72,7 @@ class CashBill extends HttpClient{
         let sign = crypto.createHash('sha1').update(id+this.secretPhrase).digest('hex');
         let response = await this.doRequest(`${this.url}/payment/${this.shopId}/${id}?sign=${sign}`)
         if(!response.status){
-            throw new CashBillError(response)
+            throw new CashBillError(response['errorMessage'])
         }
         return response
     }
