@@ -1,6 +1,6 @@
 {
   "name": "node-payments-lib2.0",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "nodejs payments lib",
   "main": "index.js",
   "scripts": {
