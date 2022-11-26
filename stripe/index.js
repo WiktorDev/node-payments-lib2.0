@@ -5,14 +5,14 @@ const { SmallAmount } = require('./exceptions')
 class Stripe extends HttpClient{
     constructor(apikey) {
         super();
-        this.apikey = apikey;
+        this.apikey = `Bearer ${apikey}`;
     }
-    async generate(successURL, cancelURL, generate_price=false, price){
+    async generate(successURL, cancelURL, priceId){
         let data = {
             success_url: successURL,
             cancel_url: cancelURL,
             mode: 'payment',
-            'line_items[0][price]': 'price_1LFfQnGbcIDen2vAqqTwiNXQ',
+            'line_items[0][price]': priceId,
             'line_items[0][quantity]': '1'
         }
         return await this.doRequest('https://api.stripe.com/v1/checkout/sessions', qs.stringify(data), "POST", {'Authorization': this.apikey})
