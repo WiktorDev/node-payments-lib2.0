@@ -1,4 +1,4 @@
-# node-payments-lib2.0
+# nodejs-payments
 
 ### Installation
 ```bash
